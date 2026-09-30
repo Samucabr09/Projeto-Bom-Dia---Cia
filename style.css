@@ -43,3 +43,16 @@ nav a:hover {
     color: #ffd52f;
 }
 
+.começo{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 120px 20px 70px;
+    background:
+        linear-gradient(135deg, #164b9b, #39a9ff);
+            
+    position: relative;
+    overflow: hidden;
+}
