@@ -26,6 +26,7 @@ nav {
     color: #ff4d4d;
 }
 
+
 nav ul {
     display: flex;
     gap: 25px;
@@ -55,4 +56,79 @@ nav a:hover {
             
     position: relative;
     overflow: hidden;
+}
+
+.começo-conteudo h1{
+    font-family: Arial, sans-serif;
+  font-size: 48px;
+  font-weight: 900;
+  text-transform: uppercase;
+  color: #ffcc00;
+  text-shadow:
+    3px 3px 0 #ff4b8b,
+    6px 6px 0 #5b4bff;
+  letter-spacing: -2px;
+}
+
+.começo-conteudo span{
+    color: #fff;
+  background: linear-gradient(135deg, #ff4b8b, #7b5cff);
+  padding: 4px 12px;
+  border-radius: 12px;
+  text-shadow: 2px 2px 0 rgba(0,0,0,.15);
+}
+
+.texto-memoria {
+  position: relative;
+  max-width: 720px;
+  margin: 40px auto;
+  padding: 20px 35px;
+
+  font-family: "Trebuchet MS", Arial, sans-serif;
+  font-size: 20px;
+  line-height: 1.7;
+  color: #414141;
+  text-align: center;
+
+  /* visual de lembrança */
+  background: #fffdf5;
+  border-radius: 8px;
+
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+
+  transform: rotate(-1deg);
+}
+
+/* detalhe colorido no topo */
+.texto-memoria::before {
+  content: "✦";
+  position: absolute;
+  top: -18px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  font-size: 28px;
+  color: #ffcc00;
+
+  text-shadow:
+    2px 2px 0 #ff5c8a;
+}
+
+/* detalhe lateral */
+.texto-memoria::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 15%;
+  width: 5px;
+  height: 70%;
+
+  background: linear-gradient(
+    to bottom,
+    #ffcc00,
+    #ff5c8a,
+    #5b6cff
+  );
+
+  border-radius: 10px;
 }
