@@ -44,18 +44,31 @@ nav a:hover {
     color: #ffd52f;
 }
 
-.começo{
+.começo {
     min-height: 100vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
+
     text-align: center;
+
     padding: 120px 20px 70px;
-    background:
-        linear-gradient(135deg, #164b9b, #39a9ff);
-            
+
+    background: linear-gradient(
+        135deg,
+        #164b9b,
+        #39a9ff
+    );
+
     position: relative;
+
     overflow: hidden;
+}
+
+.começo-conteudo{
+  position: relative;
+    z-index: 2;
 }
 
 .começo-conteudo h1{
@@ -79,56 +92,226 @@ nav a:hover {
 }
 
 .texto-memoria {
-  position: relative;
-  max-width: 720px;
-  margin: 40px auto;
-  padding: 20px 35px;
+    max-width: 750px;
+    margin: 35px auto;
+    padding: 25px 30px;
 
-  font-family: "Trebuchet MS", Arial, sans-serif;
-  font-size: 20px;
-  line-height: 1.7;
-  color: #414141;
-  text-align: center;
+    font-family: Arial, sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: 600;
 
-  /* visual de lembrança */
-  background: #fffdf5;
-  border-radius: 8px;
+    color: #fff;
 
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.08);
+    background: linear-gradient(
+        135deg,
+        #243b9b,
+        #6048c9
+    );
 
-  transform: rotate(-1deg);
+    border: 4px solid #ffd52f;
+    border-radius: 18px;
+
+    box-shadow:
+        6px 6px 0 #ff4d8d,
+        10px 10px 0 #39a9ff;
+
+    text-align: center;
+
+    position: relative;
+    z-index: 1;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* detalhe colorido no topo */
+.texto-memoria:hover {
+    transform: translateY(-5px);
+
+    box-shadow:
+        8px 8px 0 #ff4d8d,
+        13px 13px 0 #39a9ff;
+}
+
 .texto-memoria::before {
-  content: "✦";
-  position: absolute;
-  top: -18px;
-  left: 50%;
-  transform: translateX(-50%);
+    content: "📺";
+    display: block;
 
-  font-size: 28px;
-  color: #ffcc00;
+    font-size: 35px;
+    margin-bottom: 10px;
 
-  text-shadow:
-    2px 2px 0 #ff5c8a;
+    filter: drop-shadow(2px 2px 0 #ff4d8d);
 }
 
-/* detalhe lateral */
-.texto-memoria::after {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 15%;
-  width: 5px;
-  height: 70%;
 
-  background: linear-gradient(
-    to bottom,
-    #ffcc00,
-    #ff5c8a,
-    #5b6cff
-  );
 
-  border-radius: 10px;
+
+.historia {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 100px 8%;
+
+    background: linear-gradient(
+        135deg,
+        #fff4c7,
+        #ffe0ec
+    );
+
+    position: relative;
+    overflow: hidden;
+}
+
+
+.historia-conteudo {
+    width: 100%;
+    max-width: 900px;
+
+    padding: 45px;
+
+    background: rgba(255, 255, 255, 0.8);
+
+    border: 4px solid #ffd52f;
+    border-radius: 25px;
+
+    box-shadow:
+        8px 8px 0 #ff4d8b,
+        14px 14px 0 #5b4bff;
+}
+
+.historia-conteudo h1 {
+    font-family: Arial, sans-serif;
+
+    font-size: 42px;
+    font-weight: 900;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #164b9b;
+
+    margin-bottom: 30px;
+
+    text-shadow:
+        3px 3px 0 #ffd52f,
+        5px 5px 0 #ff4d8b;
+}
+
+.historia-conteudo p {
+    font-family: Arial, sans-serif;
+
+    font-size: 18px;
+    line-height: 1.8;
+
+    color: #26345c;
+
+    margin-bottom: 20px;
+
+    text-align: justify;
+}
+
+.historia-conteudo p:first-of-type::first-letter {
+    font-family: Arial, sans-serif;
+
+    font-size: 82px;
+    font-weight: 900;
+    float: left;
+
+    line-height: .9;
+
+    margin-right: 8px;
+
+    text-align: center;
+    text-transform: uppercase;
+
+    color: #164b9b;
+
+    margin-bottom: 30px;
+
+    text-shadow:
+        3px 3px 0 #ffd52f,
+        5px 5px 0 #ff4d8b;
+}
+
+/* BALÕES */
+
+.baloes {
+    position: absolute;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 1;
+}
+
+.balao {
+    position: absolute;
+
+    bottom: -100px;
+
+    width: 50px;
+    height: 65px;
+
+    border-radius: 50%;
+
+    animation: subir 8s linear infinite;
+}
+
+/* Cordinha */
+
+.balao::after {
+    content: "";
+
+    position: absolute;
+
+    width: 2px;
+    height: 80px;
+
+    background: #555;
+
+    top: 63px;
+    left: 50%;
+}
+
+/* Cores */
+
+.vermelho {
+    background: #ff4d4d;
+    left: 10%;
+}
+
+.azul {
+    background: #39a9ff;
+    left: 35%;
+
+    animation-delay: 2s;
+}
+
+.amarelo {
+    background: #ffd52f;
+    left: 60%;
+
+    animation-delay: 4s;
+}
+
+.rosa {
+    background: #ff4d8b;
+    left: 85%;
+
+    animation-delay: 1s;
+}
+
+@keyframes subir {
+
+    from {
+        bottom: -100px;
+    }
+
+    to {
+        bottom: 100%;
+    }
+
 }
