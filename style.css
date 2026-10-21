@@ -344,10 +344,10 @@ nav a:hover {
 .linha-do-tempo {
     min-height: 100vh;
 
-    padding: 100px 100%;
+    padding: 100px 8%;
 
     background: linear-gradient(
-        135deg,
+        200deg,
         #4361ee,
         #7209b7    );
 
