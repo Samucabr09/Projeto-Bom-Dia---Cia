@@ -395,4 +395,10 @@ section { padding: 100px 8%; min-height: 100vh; }
 @media (prefers-reduced-motion: reduce) {
     .balao { animation: none; }
 }
+
+footer {
+	text-align: center;
+	padding: 40px 0;/*40px cima/baixo e 0 lados*/
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
  
